@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Home</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Home</h1>
+
+    
+
+
+
+    
+
+
+    <h3> </h3>
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+    <section>
+        <article><h2>学习笔记</h2>
+<p>经过一周的算法题学习和练习，我得到了两点收获。</p>
+<p>一个是学习方法论，即所说的“五毒神掌”；另一个就是在做数组、链表、栈和队列的算法题过程中，开始去找这些题目间的内在关联，即所谓的“解题套路”。这两点是这一周对我帮助最大的。</p>
+<p>先列出这一周练习的算法题：</p>
+<table>
+<thead>
+<tr>
+<th><strong>数组</strong></th>
+<th><strong>链表</strong></th>
+<th><strong>栈、队列</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/container-with-most-water/">11. 盛最多水的容器</a></td>
+<td><a href="https://leetcode-cn.com/problems/reverse-linked-list/">206. 反转链表</a></td>
+<td><a href="https://leetcode-cn.com/problems/valid-parentheses/">20. 有效的括号</a></td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/trapping-rain-water/">42. 接雨水</a></td>
+<td><a href="https://leetcode-cn.com/problems/merge-two-sorted-lists/">21. 合并两个有序链表</a></td>
+<td><a href="https://leetcode-cn.com/problems/design-circular-deque/">641. 设计循环双端队列</a></td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/move-zeroes/">283. 移动零</a></td>
+<td><a href="https://leetcode-cn.com/problems/swap-nodes-in-pairs/">24. 两两交换链表中的节点</a></td>
+<td><a href="https://leetcode-cn.com/problems/min-stack/">155. 最小栈</a></td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/climbing-stairs/">70. 爬楼梯</a></td>
+<td><a href="https://leetcode-cn.com/problems/linked-list-cycle/">141. 环形链表</a></td>
+<td><a href="https://leetcode-cn.com/problems/largest-rectangle-in-histogram/">84. 柱状图中最大的矩形</a></td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/3sum/">15. 三数之和</a></td>
+<td><a href="https://leetcode-cn.com/problems/linked-list-cycle-ii/">142. 环形链表 II</a></td>
+<td><a href="https://leetcode-cn.com/problems/sliding-window-maximum/">239. 滑动窗口最大值</a></td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/two-sum/">1. 两数之和</a></td>
+<td><a href="https://leetcode-cn.com/problems/reverse-nodes-in-k-group/">25. K 个一组翻转链表</a></td>
+<td>用 add first 或 add last 这套新的 API 改写 Deque 的代码</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/">26. 删除排序数组中的重复项</a></td>
+<td></td>
+<td>分析 Queue 和 Priority Queue 的源码</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/rotate-array/">189. 旋转数组</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/merge-sorted-array/">88. 合并两个有序数组</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/plus-one/">66. 加一</a></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>再说我的两点收获。</p>
+<h3>五毒神掌</h3>
+<p>之前刷算法题，就存在这样的误区——会死磕。结果做出来了，但不再有精力和愿望在做接下来的题目，而且做出来后，也因为没有重新练习忘干净了，也没有多去想其他的解法。</p>
+<p>“五毒神掌”是方法论，做法如下：</p>
+<ol>
+<li>第一遍：看了没有思路（5~10 分钟）的题目，直接看题解，找着题解代码敲一遍</li>
+<li>第二遍：然后不看题解再敲一遍</li>
+<li>第三遍：第二天（或第三天）不看题解再敲一遍</li>
+<li>第四遍：接下来一天不看题解再敲一遍</li>
+<li>第五遍：面试前敲一遍温习。</li>
+</ol>
+<h3>解题套路</h3>
+<h4>数组</h4>
+<ul>
+<li>原地修改借助插入索引
+<ul>
+<li>“移动零”和“删除排序数组中的重复项”这两道题的解法都引入了一个表示当前插入位置的索引。</li>
+</ul>
+</li>
+<li>求面积借助两端索引
+<ul>
+<li>“盛最多水的容器”和“接雨水”的解法使用了两端索引（0，length - 1），而且都是以向内收窄短板的方式，求得最终结果的</li>
+</ul>
+</li>
+</ul>
+<h4>链表</h4>
+<p>链表题目会涉及到两个基本操作：一个将当前指针移动移动到下一个节点；一个是交换两个节点的位置。</p>
+<p>一、将指针移动到下一个节点</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/103346/1587281410436-e5cefc56-5d82-4e41-a3b1-f56d39a457d8.png#align=left&amp;display=inline&amp;height=329&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=657&amp;originWidth=1344&amp;size=1078673&amp;status=done&amp;style=none&amp;width=672" alt="image.png"></p>
+<p>二、交换两个节点位置</p>
+<p>交换节点时，需要引入一个空头节点，用来保存指向原来第二个节点的指针。</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/103346/1587281064565-f5a509f9-bdb0-4013-b87e-ff3add6c7c65.png#align=left&amp;display=inline&amp;height=423&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=846&amp;originWidth=1128&amp;size=1407163&amp;status=done&amp;style=none&amp;width=564" alt="image.png"></p>
+<h4>栈和队列</h4>
+<p>栈是后进先出的数据结构，队列则是先进先出的数据结构。</p>
+<p>在做“有效的括号”这道题目时，巧妙的使用栈来做判断，是我想不到的，最后知道解法后，豁然开朗。</p>
+<p>（完）</p></article>
+    </section>
+
+
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="ListNode.html">ListNode</a></li></ul><h3>Global</h3><ul><li><a href="global.html#isValid">isValid</a></li><li><a href="global.html#maxArea">maxArea</a></li><li><a href="global.html#mergeTwoLists">mergeTwoLists</a></li><li><a href="global.html#removeDuplicates">removeDuplicates</a></li><li><a href="global.html#trap">trap</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.4</a> on Sun Apr 19 2020 16:06:50 GMT+0800 (GMT+08:00)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
