@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Class: ListNode</title>
+    <title>JSDoc: Source: Week_02/n-ary-tree-preorder-traversal.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,137 +17,68 @@
 
 <div id="main">
 
-    <h1 class="page-title">Class: ListNode</h1>
+    <h1 class="page-title">Source: Week_02/n-ary-tree-preorder-traversal.js</h1>
 
     
 
 
 
-
-<section>
-
-<header>
     
-        <h2><span class="attribs"><span class="type-signature"></span></span>ListNode<span class="signature">()</span><span class="type-signature"></span></h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-
-    
-
-    
-    <h4 class="name" id="ListNode"><span class="type-signature"></span>new ListNode<span class="signature">()</span><span class="type-signature"></span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    <p>Definition for singly-linked list.</p>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Week_01_Class.js.html">Week_01/Class.js</a>, <a href="Week_01_Class.js.html#line5">line 5</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * 第二周算法练习
+ * @namespace Week02
+ */
+
+/**
+ * @param {Node} root
+ * @return {number[]}
+ */
+var preorder = function(root) {
+    const res = []
+    travel(root, res)
+    return res
+}
+
+function travel(root, res) {
+    if (root === null) {
+        return
+    }
+
+    res.push(root.val)
+
+    for (let child of root.children) {
+        travel(child, res)
+    }
+}
+
+// 非递归
+var preorder2 = function(root) {
+    var res = []
+    if (root === null) { return res }
+
+    var stack = new Stack()
+    stack.push(root)
+
+    while (!stack.isEmpty()) {
+        let pop = stack.pop()
+        res.push(pop.val)
+
+        let children = pop.children
+        for (let i = children.length - 1; i >= 0; i--) {
+            stack.push(children[i])
+        }
+    }
+
+    return res
+}
+
+export {
+    preorder
+}</code></pre>
+        </article>
+    </section>
 
 
 

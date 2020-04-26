@@ -1,4 +1,9 @@
 /**
+ * 第一周算法练习
+ * @namespace Week01
+ */
+
+/**
  * 20. 有效的括号
  *
  * @see {@link https://leetcode-cn.com/problems/valid-parentheses/} for further information.

@@ -1,4 +1,9 @@
 /**
+ * 第一周算法练习
+ * @namespace Week01
+ */
+
+ /**
  * 21. 合并两个有序链表
  *
  * @see {@link https://leetcode-cn.com/problems/merge-two-sorted-lists/} for further information.

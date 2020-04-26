@@ -1,10 +1,15 @@
 {
     "source": {
-        "include": ["Week_01"],
+        "include": [
+            "Week_01",
+            "Week_02"
+        ],
         "includePattern": ".js$",
         "excludePattern": "(node_modules/|docs)"
     },
-    "plugins": ["plugins/markdown"],
+    "plugins": [
+        "plugins/markdown"
+    ],
     "templates": {
         "cleverLinks": true,
         "monospaceLinks": true
@@ -12,6 +17,6 @@
     "opts": {
         "recurse": true,
         "destination": "./docs/",
-        "readme": "./Week_01/Note.md"
+        "readme": "./Week_02/Note.md"
     }
 }
