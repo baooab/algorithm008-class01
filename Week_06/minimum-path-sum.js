@@ -65,3 +65,32 @@ var minPathSum2 = function(grid) {
 
     return grid[0][0]
 }
+
+/**
+ * @param {number[][]} grid
+ * @return {number}
+ */
+var minPathSum3 = function(grid) {
+    const rows = grid.length
+    const cols = grid[0].length
+    const dp = Array.from({ length: cols })
+
+    for (let i = rows - 1; i >= 0; i--) {
+        for (let j = cols - 1; j >= 0; j--) {
+            // 先初始化，右下角的元素
+            if (i === rows - 1 && j === cols - 1) {
+                dp[j] = grid[i][j]
+            // 最后一行
+            } else if (i === rows - 1 && j !== cols - 1) {
+                dp[j] = grid[i][j] + dp[j + 1]
+            // 最后一列
+            } else if (i !== rows - 1 && j === cols - 1) {
+                dp[j] = grid[i][j] + dp[j]
+            } else {
+                dp[j] = grid[i][j] + Math.min(dp[j], dp[j + 1])
+            }
+        }
+    }
+
+    return dp[0]
+}
